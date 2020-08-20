@@ -15,7 +15,7 @@ use std::collections::Bound::Included;
 
 /// A section of backed memory. Essentially a vector of type `u8` with
 /// permissions.
-#[derive(Clone, Debug, Deserialize, Eq, PartialEq, Serialize)]
+#[derive(Clone, Debug, Deserialize, Eq, PartialEq, Serialize, Hash)]
 pub struct Section {
     data: Vec<u8>,
     permissions: MemoryPermissions,
@@ -54,7 +54,7 @@ impl Section {
 }
 
 /// A simple memory model, containing permissioned sections of type `u8`.
-#[derive(Clone, Debug, Deserialize, Eq, PartialEq, Serialize)]
+#[derive(Clone, Debug, Deserialize, Eq, PartialEq, Serialize, Hash)]
 pub struct Memory {
     endian: Endian,
     sections: BTreeMap<u64, Section>,

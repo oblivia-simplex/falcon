@@ -54,7 +54,7 @@ impl StackPointerOffset {
         self.value().is_some()
     }
 
-    pub fn is_bototm(&self) -> bool {
+    pub fn is_bottom(&self) -> bool {
         match self {
             StackPointerOffset::Bottom => true,
             _ => false,

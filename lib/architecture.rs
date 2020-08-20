@@ -6,7 +6,7 @@ use crate::translator;
 use std::fmt::Debug;
 
 /// An architecture's endanness.
-#[derive(Clone, Debug, Deserialize, Eq, PartialEq, Serialize)]
+#[derive(Clone, Debug, Deserialize, Eq, PartialEq, Serialize, Hash)]
 pub enum Endian {
     Big,
     Little,
